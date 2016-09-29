@@ -5,10 +5,15 @@
   "main": "bundle.js",
   "dependencies": {
     "css-loader": "^0.25.0",
-    "style-loader": "^0.13.1"
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
   },
   "devDependencies": {},
   "scripts": {
+    "build": "webpack --progress --colors",
+	"watch": "webpack --progress --colors --watch",
+	"dev": "webpack-dev-server --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
