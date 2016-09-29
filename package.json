@@ -4,16 +4,23 @@
   "description": "",
   "main": "bundle.js",
   "dependencies": {
+    "babel-core": "^6.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "webpack --progress --colors",
-	"watch": "webpack --progress --colors --watch",
-	"dev": "webpack-dev-server --progress --colors",
+	"_build": "webpack --progress --colors main.js bundle.js --module-bind 'js=babel-loader'",
+	"build": "webpack --progress --colors --module-bind 'js=babel-loader'",
+    "watch": "webpack --progress --colors --watch",
+    "dev": "webpack-dev-server --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
