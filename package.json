@@ -15,11 +15,13 @@
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "html-webpack-plugin": "^2.22.0"
+  },
   "scripts": {
     "build": "webpack --progress --colors --module-bind 'js=babel-loader'",
     "watch": "webpack --progress --colors --watch --module-bind 'js=babel-loader'",
-    "dev": "webpack-dev-server --progress --colors",
+    "dev": "webpack-dev-server --port 3000 --hot --host 0.0.0.0 --content-base build/ --module-bind 'js=babel-loader'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
