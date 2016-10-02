@@ -1,23 +1,17 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
-export class Comment extends React.Component {
+const Comment = ({ author, text }) => (
+  <div className="comment">
+    <h2 className="commentAuthor">
+      { author }
+    </h2>
+    { text }
+  </div>
+)
 
-  constructor(props) {
-    super(props);
-    this.state = {author: props.author, children: props.children}
-  }
-
-  render() {
-    return (
-      <div className="comment">
-        <h2 className="commentAuthor">
-          {this.state.author}
-        </h2>
-        {this.state.children.toString()}
-      </div>
-    );
-  }
-
+Comment.propTypes = {
+  author: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 }
 
 export default Comment

@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Comment from './Comment';
 
-export class CommentList extends React.Component {
+const CommentList = ({ comments }) => (
+  <div className="commentList">
+    {comments.map(comment => 
+      <Comment
+        key={comment.id}
+        {...comment}
+      />
+    )}
+  </div>
+)
 
-  render() {
-    var commentNodes = this.props.data.map(function(comment) {
-      return (
-        <Comment author={comment.author} key={comment.id}>
-          {comment.text}
-        </Comment>
-      );
-    });
-    return (
-      <div className="commentList">
-        {commentNodes}
-      </div>
-    );
-  }
-
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    author: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  }).isRequired).isRequired
 }
 
 export default CommentList
