@@ -1,0 +1,7 @@
+{
+    "comments": [
+      {"id": 1, "author": "Sam", "text": "This is just a message."},
+      {"id": 2, "author": "Steve", "text": "This is just another message."},
+      {"id": 3, "author": "Peter", "text": "This is just *another* message."}
+    ]
+}

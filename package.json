@@ -16,12 +16,15 @@
     "webpack-dev-server": "^1.16.1"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^2.22.0"
+    "html-webpack-plugin": "^2.22.0",
+    "jquery": "^3.1.1",
+    "json-server": "^0.8.21"
   },
   "scripts": {
     "build": "webpack --progress --colors --module-bind 'js=babel-loader'",
     "watch": "webpack --progress --colors --watch --module-bind 'js=babel-loader'",
-    "dev": "webpack-dev-server --port 3000 --hot --host 0.0.0.0 --content-base build/ --module-bind 'js=babel-loader'",
+    "dev": "NODE_ENV=dev webpack-dev-server --port 3000 --hot --host 0.0.0.0 --content-base build/ --module-bind 'js=babel-loader'",
+    "api": "json-server --watch db.json --port 3004",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

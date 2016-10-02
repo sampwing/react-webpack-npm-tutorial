@@ -1,4 +1,5 @@
 var path = require("path");
+var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -12,7 +13,8 @@ module.exports = {
             { test: /\.css$/, loader: "style!css" }
         ]
     },
-    plugins: [new HtmlWebpackPlugin({
-      template: "index.ejs"
-    })]
+    plugins: [
+      new HtmlWebpackPlugin({template: "index.ejs"}),
+      new webpack.EnvironmentPlugin(['NODE_ENV'])
+    ]
 };
