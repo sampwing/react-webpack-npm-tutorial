@@ -9,26 +9,6 @@
       "id": 2,
       "author": "Steve",
       "text": "This is just another message."
-    },
-    {
-      "id": 3,
-      "author": "Peter",
-      "text": "This is just *another* message."
-    },
-    {
-      "author": "Steven",
-      "text": "reaven",
-      "id": 1475370815809
-    },
-    {
-      "author": "testing",
-      "text": 123,
-      "id": 1475370857279
-    },
-    {
-      "author": "jk",
-      "text": "abc",
-      "id": 1475370874389
     }
   ]
 }
